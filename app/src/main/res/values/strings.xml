@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BasketFeature</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_teams">Teams</string>
+    <string name="title_forgot_pass">Forgotten your password?</string>
+    <string name="title_no_acc">Don’t have an account?</string>
+    <string name="title_reg">Register</string>
+    <string name="title_login_fail">Login procedure was failed</string>
+    <string name="title_register_fail">Register procedure was failed</string>
+    <string name="title_register_ok">Register procedure was successfully</string>
+</resources>
