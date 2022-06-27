@@ -11,4 +11,10 @@
     <color name="textColor">#000000</color>
     <color name="registerTextColor">#FD79C0</color>
     <color name="btnLoginColor">#FD79C0</color>
+
+    <color name="navBarActiveColor">#F43FA1</color>
+    <color name="navBarInactiveColor">#979797</color>
+
+    <color name="teamItemColor">#F43FA1</color>
+    <color name="gameItemColor">#FF93DA</color>
 </resources>

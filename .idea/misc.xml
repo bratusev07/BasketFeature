@@ -3,6 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/drawable/bottom_nav_color.xml" value="0.1525" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/drawable/ic_account.xml" value="0.1525" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1525" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/drawable/ic_icon_edit.xml" value="0.1525" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/drawable/ic_plus_24.xml" value="0.1525" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/layout/activity_register.xml" value="0.17831813576494426" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/layout/fragment_home.xml" value="0.2708333333333333" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/layout/fragment_teams.xml" value="0.2708333333333333" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/layout/item_game.xml" value="0.2708333333333333" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/layout/item_team.xml" value="0.2708333333333333" />
+        <entry key="..\:/Project/Android/BasketFeature/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Projects/Android/BasketFeature/app/src/main/res/drawable/button_login.xml" value="0.1065" />
         <entry key="..\:/Projects/Android/BasketFeature/app/src/main/res/layout/activity_login.xml" value="0.17552083333333332" />
         <entry key="..\:/Projects/Android/BasketFeature/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
