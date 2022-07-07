@@ -10,12 +10,16 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
 import ru.bratusevd.basketfeature.R;
 import ru.bratusevd.basketfeature.models.GameModel;
 import ru.bratusevd.basketfeature.models.TeamModel;
+import ru.bratusevd.basketfeature.ui.match.MatchFragment;
 import ru.bratusevd.basketfeature.ui.teams.TeamAdapter;
 
 public class HomeFragment extends Fragment {
@@ -58,6 +62,7 @@ public class HomeFragment extends Fragment {
 
     private void addGameClick(){
         makeLog("addGameClick");
+        openFragment(new MatchFragment());
         showAlertDialog();
     }
 
@@ -87,6 +92,14 @@ public class HomeFragment extends Fragment {
 
     private void makeToast(String message) {
         Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    private void openFragment(Fragment fragment) {
+        getActivity().findViewById(R.id.nav_view).setVisibility(View.INVISIBLE);
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     private void makeLog(String message) {

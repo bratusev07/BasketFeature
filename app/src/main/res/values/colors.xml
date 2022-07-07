@@ -17,4 +17,5 @@
 
     <color name="teamItemColor">#F43FA1</color>
     <color name="gameItemColor">#FF93DA</color>
+    <color name="playerItemColor">#FFC5F2</color>
 </resources>

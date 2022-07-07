@@ -5,16 +5,19 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.ArrayList;
 
 import ru.bratusevd.basketfeature.R;
 import ru.bratusevd.basketfeature.models.TeamModel;
+import ru.bratusevd.basketfeature.ui.player.PlayerFragment;
 
 public class TeamsFragment extends Fragment {
 
@@ -53,6 +56,13 @@ public class TeamsFragment extends Fragment {
                 addTeamClick();
             }
         });
+
+        teamList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                openFragment(new PlayerFragment());
+            }
+        });
     }
 
     private void addTeamClick() {
@@ -78,6 +88,13 @@ public class TeamsFragment extends Fragment {
 
         teamAdapter = new TeamAdapter(getContext(), teamModels);
         teamList.setAdapter(teamAdapter);
+    }
+
+    private void openFragment(Fragment fragment) {
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     private void showAlertDialog() {
