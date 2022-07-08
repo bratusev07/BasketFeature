@@ -24,13 +24,16 @@
         <entry key="..\:/Projects/Android/BasketFeature/app/src/main/res/layout/fragment_profile.xml" value="0.17552083333333332" />
         <entry key="..\:/Projects/Android/BasketFeature/app/src/main/res/layout/fragment_teams.xml" value="0.17552083333333332" />
         <entry key="..\:/Projects/Android/BasketFeature/app/src/main/res/menu/bottom_nav_menu.xml" value="0.17552083333333332" />
+        <entry key="..\:/Projects/Android/BasketFeatureFix/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Projects/Android/BasketFeatureFix/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Projects/Android/BasketFeatureFix/app/src/main/res/layout/add_game_alert.xml" value="0.17552083333333332" />
         <entry key="..\:/Projects/Android/BasketFeatureFix/app/src/main/res/layout/fragment_match.xml" value="0.17552083333333332" />
         <entry key="..\:/Projects/Android/BasketFeatureFix/app/src/main/res/layout/fragment_players.xml" value="0.1" />
         <entry key="..\:/Projects/Android/BasketFeatureFix/app/src/main/res/layout/fragment_teams.xml" value="0.17552083333333332" />
         <entry key="..\:/Projects/Android/BasketFeatureFix/app/src/main/res/layout/item_game.xml" value="0.17552083333333332" />
         <entry key="..\:/Projects/Android/BasketFeatureFix/app/src/main/res/layout/item_match.xml" value="0.17552083333333332" />
         <entry key="..\:/Projects/Android/BasketFeatureFix/app/src/main/res/layout/item_player.xml" value="0.17552083333333332" />
+        <entry key="..\:/Projects/Android/BasketFeatureFix/app/src/main/res/layout/searchable_list_dialog.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -5,22 +5,25 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 
 import ru.bratusevd.basketfeature.R;
+import ru.bratusevd.basketfeature.customViews.SearchableSpinner;
 import ru.bratusevd.basketfeature.models.GameModel;
 import ru.bratusevd.basketfeature.models.TeamModel;
-import ru.bratusevd.basketfeature.ui.match.MatchFragment;
-import ru.bratusevd.basketfeature.ui.teams.TeamAdapter;
 
 public class HomeFragment extends Fragment {
 
@@ -62,7 +65,7 @@ public class HomeFragment extends Fragment {
 
     private void addGameClick(){
         makeLog("addGameClick");
-        openFragment(new MatchFragment());
+        //openFragment(new MatchFragment());
         showAlertDialog();
     }
 
@@ -88,6 +91,41 @@ public class HomeFragment extends Fragment {
 
     private void showAlertDialog(){
         makeLog("showAlertDialog");
+        View promptsView = View.inflate(getContext(), R.layout.add_game_alert, null);
+        AlertDialog alertDialog = new MaterialAlertDialogBuilder(getContext(), R.style.RoundShapeTheme)
+                .setView(promptsView)
+                .create();
+
+        ArrayList<String> teams = new ArrayList<>();
+        teams.add(("Team 1"));
+        teams.add(("Team 2"));
+        teams.add(("Team 3"));
+        teams.add(("Team 4"));
+
+        final TextInputEditText gameName = promptsView.findViewById(R.id.createGame_name);
+        final TextInputEditText gameDate = promptsView.findViewById(R.id.createGame_date);
+        SearchableSpinner teamA = promptsView.findViewById(R.id.teamA_spinner);
+        SearchableSpinner teamB = promptsView.findViewById(R.id.teamB_spinner);
+
+        ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item, teams);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        teamA.setAdapter(adapter);
+        teamB.setAdapter(adapter);
+        teamA.setSelection(1);
+        teamB.setSelection(1);
+
+        promptsView.findViewById(R.id.saveGame).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = gameName.getText().toString();
+                String date = gameDate.getText().toString();
+                TeamModel teamModelA = (TeamModel) teamA.getSelectedItem();
+                TeamModel teamModelB = (TeamModel) teamB.getSelectedItem();
+            }
+        });
+
+        alertDialog.show();
     }
 
     private void makeToast(String message) {
