@@ -59,13 +59,6 @@ public class MatchFragment extends Fragment {
         playerModels.add(new PlayerModel("Game 3", "19"));
         playerModels.add(new PlayerModel("Game 4", "19"));
         playerModels.add(new PlayerModel("Game 5", "19"));
-        playerModels.add(new PlayerModel("Game 6", "19"));
-        playerModels.add(new PlayerModel("Game 7", "19"));
-        playerModels.add(new PlayerModel("Game 8", "19"));
-        playerModels.add(new PlayerModel("Game 9", "19"));
-        playerModels.add(new PlayerModel("Game 10", "11"));
-        playerModels.add(new PlayerModel("Game 11", "11"));
-        playerModels.add(new PlayerModel("Game 12", "11"));
 
         matchAdapter = new MatchAdapter(getContext(), playerModels);
         leftTeam.setAdapter(matchAdapter);

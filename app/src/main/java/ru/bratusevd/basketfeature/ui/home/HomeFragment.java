@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -24,6 +23,7 @@ import ru.bratusevd.basketfeature.R;
 import ru.bratusevd.basketfeature.customViews.SearchableSpinner;
 import ru.bratusevd.basketfeature.models.GameModel;
 import ru.bratusevd.basketfeature.models.TeamModel;
+import ru.bratusevd.basketfeature.ui.match.MatchFragment;
 
 public class HomeFragment extends Fragment {
 
@@ -65,7 +65,6 @@ public class HomeFragment extends Fragment {
 
     private void addGameClick(){
         makeLog("addGameClick");
-        //openFragment(new MatchFragment());
         showAlertDialog();
     }
 
@@ -120,8 +119,10 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 String name = gameName.getText().toString();
                 String date = gameDate.getText().toString();
-                TeamModel teamModelA = (TeamModel) teamA.getSelectedItem();
-                TeamModel teamModelB = (TeamModel) teamB.getSelectedItem();
+                String teamModelA = teamA.getSelectedItem().toString();
+                String teamModelB = teamB.getSelectedItem().toString();
+                Log.d(logTag, name + " " + date + " " + teamModelA + " " + teamModelB);
+                openFragment(new MatchFragment());
             }
         });
 

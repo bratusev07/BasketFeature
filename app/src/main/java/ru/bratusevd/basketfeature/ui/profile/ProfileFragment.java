@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import ru.bratusevd.basketfeature.R;
@@ -37,7 +36,7 @@ public class ProfileFragment extends Fragment {
         rootView = inflater.inflate(R.layout.fragment_profile, container, false);
         makeLog("onCreate");
         findViews();
-        setFocusable();
+        setEnabled(false);
         setOnClick();
         return rootView;
     }
@@ -64,44 +63,30 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 updateHint();
-
-                profile_name.setText("");
-                profile_surname.setText("");
-                profile_season.setText("");
-                profile_position.setText("");
             }
         });
     }
 
-    private void setFocusable() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            if ((profile_name.getFocusable() == View.NOT_FOCUSABLE)) {
-                profile_name.setFocusable(View.FOCUSABLE);
-                profile_surname.setFocusable(View.FOCUSABLE);
-                profile_season.setFocusable(View.FOCUSABLE);
-                profile_position.setFocusable(View.FOCUSABLE);
-            } else {
-                profile_name.setFocusable(View.NOT_FOCUSABLE);
-                profile_surname.setFocusable(View.NOT_FOCUSABLE);
-                profile_season.setFocusable(View.NOT_FOCUSABLE);
-                profile_position.setFocusable(View.NOT_FOCUSABLE);
-            }
-        }
+    private void setEnabled(boolean flag) {
+        makeLog("setEnabled");
+        profile_name.setEnabled(flag);
+        profile_surname.setEnabled(flag);
+        profile_season.setEnabled(flag);
+        profile_position.setEnabled(flag);
     }
 
     private void updateHint(){
+        makeLog("updateText");
         img_edit.setVisibility(View.VISIBLE);
         profile_save.setVisibility(View.INVISIBLE);
-        profile_name.setHint(profile_name.getText().toString());
-        profile_surname.setHint(profile_surname.getText().toString());
-        profile_season.setHint(profile_season.getText().toString());
-        profile_position.setHint(profile_position.getText().toString());
+        setEnabled(false);
     }
 
     private void editButton() {
+        makeLog("editButton");
         img_edit.setVisibility(View.INVISIBLE);
         profile_save.setVisibility(View.VISIBLE);
-        setFocusable();
+        setEnabled(true);
     }
 
     private void makeToast(String message) {
