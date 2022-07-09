@@ -46,52 +46,26 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <ru.bratusevd.basketfeature.customViews.SearchableSpinner
+        android:id="@+id/teamA_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
-        android:hint="Team A"
-        app:boxCornerRadiusBottomEnd="20dp"
-        app:boxCornerRadiusBottomStart="20dp"
-        app:boxCornerRadiusTopEnd="20dp"
-        app:boxCornerRadiusTopStart="20dp">
+        android:background="@drawable/black_border"
+        android:minHeight="57dp" />
 
-        <ru.bratusevd.basketfeature.customViews.SearchableSpinner
-            android:id="@+id/teamA_spinner"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            android:minHeight="50dp" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <ru.bratusevd.basketfeature.customViews.SearchableSpinner
+        android:id="@+id/teamB_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
-        android:hint="Team B"
-        app:boxCornerRadiusBottomEnd="20dp"
-        app:boxCornerRadiusBottomStart="20dp"
-        app:boxCornerRadiusTopEnd="20dp"
-        app:boxCornerRadiusTopStart="20dp">
-
-        <ru.bratusevd.basketfeature.customViews.SearchableSpinner
-            android:id="@+id/teamB_spinner"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="10dp"
-            android:minHeight="50dp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:background="@drawable/black_border"
+        android:minHeight="57dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveGame"
